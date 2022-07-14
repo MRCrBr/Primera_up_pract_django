@@ -19,7 +19,16 @@ from . import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.saludo),
-
+    path('', views.login),
+    path('tienda.html/', views.tienda),
+    path('QuienesSomos.html/', views.about),
+    path('seguimiento.html/', views.seguimiento),
+    path('loginyregistro.html/', views.login),
+    path('index.html/',views.saludo),
+    path('index.html/tienda.html', views.tienda),
+    path('index.html/QuienesSomos.html', views.about),
+    path('index.html/Seguimiento.html', views.seguimiento),
+    path('index.html/crud.html', views.CRUD),
+    path('eliminarproducto/<id>',views.eliminarproducto),
+    path('agregarproducto/<id>',views.agregarproducto),
 ]

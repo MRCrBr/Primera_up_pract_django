@@ -2,23 +2,22 @@
 <html lang="es">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
     <title>Tienda</title>
 </head>
 
-<body>
-
-    <body class="container-fluid" background="img\fondo.png">
+    <body class="container-fluid" background="{% static 'img\fondo.png'%}">
         <center><h1 style="color:rgba(0, 0, 0, 0.918)">Tienda de Mascotas Los BLACKHOLES</h1></center>
         <!-- nav bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">
-                <img style="vertical-align: left" width="auto" height="45" src="img\logo.jpg" alt="inicio">
+                <img style="vertical-align: left" width="auto" height="45" src="{% static 'img\logo.jpg' %}" alt="inicio">
               </a>
               
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,19 +25,14 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="loginyregistro.html">LOGIN Y REGISTRO</a>
-                  <li class="nav-item">
-                    <a class="nav-link" href="tienda.html">TIENDA</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="Seguimiento.html">CARRITO DE COMPRAS</a>
                   </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="QuienesSomos.html">QUIENES SOMOS</a>   
-                </li> 
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">INICIO</a>      
+                  </li>  
+                   
                 </ul>
               </div>
             </div>
@@ -58,7 +52,7 @@
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Plato Pequeño</h3>
-                            <img class="item-image" src="img\platoeperro.jpg">
+                            <img class="item-image" src="{% static 'img\platoeperro.jpg'%}">
 
                             <div class="item-details">
                                 <h4 class="item-price">$4.000</h4>
@@ -70,7 +64,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Adorno Navideño</h3>
 
-                            <img class="item-image" src="img\cuernosnavidad.jpg">
+                            <img class="item-image" src="{% static 'img\cuernosnavidad.jpg' %}">
 
                             <div class="item-details">
                                 <h4 class="item-price">$5.000</h4>
@@ -85,7 +79,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Purina PRO PLAN ADULTO</h3>
 
-                            <img class="item-image" src="img\bbfc64ad-8b8c-4801-ade1-e1ba68cb653a.jpg">
+                            <img class="item-image" src="{% static 'img\bbfc64ad-8b8c-4801-ade1-e1ba68cb653a.jpg'%}">
 
                             <div class="item-details">
                                 <h4 class="item-price">$30.000</h4>
@@ -97,7 +91,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Collar anti pulgas Perro mediano</h3>
 
-                            <img class="item-image" src="img\9d00a0a5-efc9-43d2-8af6-67d41cf6fc75.jpg">
+                            <img class="item-image" src="{% static 'img\9d00a0a5-efc9-43d2-8af6-67d41cf6fc75.jpg'%}">
 
                             <div class="item-details">
                                 <h4 class="item-price">$20.000</h4>
@@ -111,7 +105,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Chaleco Perro pequeño</h3>
 
-                            <img class="item-image" src="img\de1adef0-cfcf-474c-8af8-7ddcd2d60322.jpg">
+                            <img class="item-image" src="{% static 'img\de1adef0-cfcf-474c-8af8-7ddcd2d60322.jpg'%}">
                             <div class="item-details">
                                 <h4 class="item-price">$15.000</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -122,7 +116,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Vitaminas Reconstructivas</h3>
 
-                            <img class="item-image" src="img\df638e30-d82f-43c6-bc98-c558f8d98cc1.jpg">
+                            <img class="item-image" src="{% static 'img\df638e30-d82f-43c6-bc98-c558f8d98cc1.jpg'%}">
                             <div class="item-details">
                                 <h4 class="item-price">$5.000</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -214,6 +208,7 @@
         </div>
 
     </section>
+    </body>
     <!-- END SECTION SHOPPING CART -->
 
 
@@ -237,8 +232,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <script src="./tienda.js"></script>
+    <script src="{%static 'tienda.js'%}"></script>
 
-</body>
+
 
 </html>
